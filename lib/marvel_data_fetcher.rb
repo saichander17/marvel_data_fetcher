@@ -2,7 +2,7 @@
 module MarvelDataFetcher
 	# https://developer.marvel.com/docs#%21/public/getCreatorCollection_get_0
 	# Please check the above link to know what params can be passed
-	def index(params)
+	def character_index(params)
 		time_stamp = Time.zone.now.to_f
 		payload = {
 			# limit: params[:limit],
@@ -18,7 +18,7 @@ module MarvelDataFetcher
 		return data
 	end
 
-	def show(id)
+	def character_show(id)
 		time_stamp = Time.zone.now.to_f
 		payload = {
 			apikey: marvel_public_key,
