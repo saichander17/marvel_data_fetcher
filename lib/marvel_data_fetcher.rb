@@ -51,16 +51,11 @@ module MarvelDataFetcher
 
 		def marvel_private_key
 			Rails.application.secrets.marvel_private_key
-			# params[:marvel_private_key] || DEFAULT_MARVEL_PRIVATE_KEY
 		end
 
 		def marvel_public_key
 			Rails.application.secrets.marvel_public_key
-			# params[:marvel_public_key] || DEFAULT_MARVEL_PUBLIC_KEY
 		end
-
-		# DEFAULT_MARVEL_PRIVATE_KEY="8667302ce23941565f745a820706ed7b2b35e010"
-		# DEFAULT_MARVEL_PUBLIC_KEY="eaaedeaab2d7d0e6d9a5274fd35cd6ce"
 
 		def get_api_call(url, headers)
 			begin
